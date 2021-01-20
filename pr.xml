@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM 'ProjectRecord.dtd'>
+<pr>
+    <meta>
+        <key>DAW2020:Teste</key>
+        <title>Teste DAW 2021</title>
+        <bdate>2021-01-20</bdate>
+        <edate>2021-01-20</edate>
+        <supervisor url="http://www.di.uminho.pt/~jcr">
+            José Carlos Ramalho
+        </supervisor>
+    </meta>
+    <team>
+        <member id="PG42828">
+            <name>Filipe Freitas</name>
+            <email>pg42828@alunos.uminho.pt</email>
+            <link url="https://github.com/filipejsfreitas" />
+        </member>
+    </team>
+    <abstract>
+        <p>
+            O teste de DAW2020 foi realizado no dia 20-01-2021 pelas 13:00.
+        </p>
+        <p>
+            No primeiro exercício, foi pedido para fazer um "data cleansing". Este data cleansing teve os seguintes passos:
+        </p>
+        <p>
+            1) Converter o ficheiro para JSON válido, colocando aspas à volta do nome de todas as keys (recorrendo ao Search and Replace do VSCode);
+        </p>
+        <p>
+            2) Copiar o campo "ref" para um novo campo, "_id", substituindo todas as barras por underscores (recorrendo ao Search and Replace do VSCode);
+        </p>
+        <p>
+            3) Aplicar a formatação automática do VSCode para mais facilmente identificar outros erros que possam existir.
+        </p>
+        <p>
+            4) Corrigir alguns pequenos erros encontrados no ficheiro (má formatação do ficheiro JSON);
+        </p>
+        <p>
+            5) Adicionar os campos "pai", "mae" e "batisado", com recurso ao Search and Replace do VSCode (com as seguintes expressões regulares: find: «"title": "Registo de batismo n.º ([0-9]+): (.+). Pai: (.*); Mãe: (.*)",»   , replace: «"title": "Registo de batismo n.º $1: $2. Pai: $3; Mãe: $4",\n		"pai": "$3",\n		"mae": "$4",\n		"batisado": "$2",»;
+        </p>
+        <p>
+            6) Substituir todos os TAB por espaços;
+        </p>
+        <p>
+            7) Substituir o valor do campo "date", retirando a segunda componente da data. Visto que um batismo ocorre num só dia, ter a data de fim após a barra não faz muito sentido. Assim, se for removida a segunda parte, torna-se mais fácil de trabalhar com o dataset;
+        </p>
+        <p>
+            8) Por fim, foram importados os dados para o MongoDB: mongoimport --db daw-2021-normal --collection batismos --jsonArray --file batismos.json
+        </p>
+        <p>
+            Para executar a aplicação desenvolvida, basta simplesmente executar o MongoDB, e depois os comandos "npm install" e "npm start". O servidor estará disponível na porta 3000, por defeito.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="ex1/">ex1/ - Servidor da API de dados pedida no primeiro exercício</link>
+        <link url="ex2/">ex2/ - Servidor da interface pedida no segundo exercício</link>
+    </deliverables>
+</pr>
