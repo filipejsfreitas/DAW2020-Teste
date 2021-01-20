@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  div.w3-container
+    h1 CLAV - Processo #{processo.codigo}
+
+    ul.w3-ul.w3-border
+      li Código: #{processo.codigo}
+      li Título: #{processo.titulo}
+      li Descrição: #{processo.descricao}
+    
+      li Descendentes: 
+        ul.w3-ul
+          each filho in processo.filhos
+            li
+              a(href='/classes/' + filho.codigo) #{filho.codigo} - #{filho.titulo}
+          else
+            li Não existem processos descendentes..
+    
+      li Termos de índice:
+        ul.w3-ul
+          each termo in processo.termosInd
+            li
+              a(href='/termosIndice/' + termo.idTI.split('#')[1]) #{termo.termo}
+          else
+            li Não existem termos de índice para este processo.

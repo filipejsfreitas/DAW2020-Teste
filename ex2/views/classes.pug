@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div.w3-container
+    h1 CLAV - Classes
+  
+    ul.w3-ul.w3-border
+      each classe in classes
+        li
+          a(href='/classes/' + classe.codigo) #{classe.codigo} - #{classe.titulo}
+      else
+        li Não existem classes.
+    
+    a(href='/') [ Voltar ]
