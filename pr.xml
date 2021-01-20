@@ -51,9 +51,22 @@
         <p>
             Para executar a aplicação desenvolvida, basta simplesmente executar o MongoDB, e depois os comandos "npm install" e "npm start". O servidor estará disponível na porta 3000, por defeito.
         </p>
+        <p>
+            Relativamente ao aquecimendo do exercício 2, a resposta à primeira pergunta do mesmo é: existem 21 processos, que são os seguintes: «["900.10.001","900.10.002","900.10.500","900.10.501","900.10.502","900.10.503","900.10.504","900.10.505","900.20.001","900.20.002","900.20.200","900.20.201","900.20.400","900.20.401","900.20.402","900.20.600","900.20.601","900.20.602","900.20.603","900.20.604","900.20.605"]».
+        </p>
+        <p>
+            A resposta à segunda pergunta do aquecimento é: existem 637 entidades catalogadas.
+        </p>
+        <p>
+            A resposta à terceira pergunta do aquecimento é: existem 8 processos na descendência de 900.10.
+        </p>
+        <p>
+            A resposta à quarta pergunta do aquecimento é: existem 5 processos relacionados com 900.10.505.
+        </p>
     </abstract>
     <deliverables>
         <link url="ex1/">ex1/ - Servidor da API de dados pedida no primeiro exercício</link>
         <link url="ex2/">ex2/ - Servidor da interface pedida no segundo exercício</link>
+        <link url="aquecimento/">aquecimento/ - Scripts utilizados para responder ao aquecimento do exercício 2</link>
     </deliverables>
 </pr>
