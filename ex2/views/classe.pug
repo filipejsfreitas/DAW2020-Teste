@@ -17,4 +17,4 @@ block content
           else
             li Não existem classes.
 
-    a(href='/' + classe.codigo.split('.').splice(-1).join('.')) [ Voltar ]
+    a(href='/classes/' + classe.codigo.split('.').splice(0, classe.nivel - 1).join('.')) [ Voltar ]

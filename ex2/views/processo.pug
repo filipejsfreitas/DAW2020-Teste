@@ -21,6 +21,8 @@ block content
         ul.w3-ul
           each termo in processo.termosInd
             li
-              a(href='/termosIndice/' + termo.idTI.split('#')[1]) #{termo.termo}
+              a(href='/termosIndice#' + termo.idTI.split('#')[1]) #{termo.termo}
           else
             li Não existem termos de índice para este processo.
+    
+    a(href='/classes/' + processo.codigo.split('.').splice(0, processo.nivel - 1).join('.')) [ Voltar ]
